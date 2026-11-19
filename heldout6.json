@@ -1,0 +1,609 @@
+{
+ "source": "MiniMax-M3 (2026-11-03), after round-5 fixes, round 6 (blind)",
+ "geo": [
+  {
+   "q": "hey, what's the capital of Egypt?",
+   "answer": "cairo",
+   "yn": null
+  },
+  {
+   "q": "What's Kenya's capital city?",
+   "answer": "nairobi",
+   "yn": null
+  },
+  {
+   "q": "Capital of Australia?",
+   "answer": "canberra",
+   "yn": null
+  },
+  {
+   "q": "Hey there, what's South Korea's capital?",
+   "answer": "seoul",
+   "yn": null
+  },
+  {
+   "q": "What's the capital of Morocco, please?",
+   "answer": "rabat",
+   "yn": null
+  },
+  {
+   "q": "What's the capital of Zimbabwe?",
+   "answer": "harare",
+   "yn": null
+  },
+  {
+   "q": "Tunisia's capital?",
+   "answer": "tunis",
+   "yn": null
+  },
+  {
+   "q": "What's the capital of Haiti?",
+   "answer": "port au prince",
+   "yn": null
+  },
+  {
+   "q": "Which country has Tokyo as its capital?",
+   "answer": "japan",
+   "yn": null
+  },
+  {
+   "q": "Which country's capital is Ottawa?",
+   "answer": "canada",
+   "yn": null
+  },
+  {
+   "q": "Which country is Brasilia the capital of?",
+   "answer": "brazil",
+   "yn": null
+  },
+  {
+   "q": "Which country has Bangkok as its capital?",
+   "answer": "thailand",
+   "yn": null
+  },
+  {
+   "q": "Which country's capital is Rome?",
+   "answer": "italy",
+   "yn": null
+  },
+  {
+   "q": "Which country is Phnom Penh the capital of?",
+   "answer": "cambodia",
+   "yn": null
+  },
+  {
+   "q": "Which country's capital is Havana?",
+   "answer": "cuba",
+   "yn": null
+  },
+  {
+   "q": "Which continent is Senegal in?",
+   "answer": "africa",
+   "yn": null
+  },
+  {
+   "q": "Which continent does Vietnam belong to?",
+   "answer": "asia",
+   "yn": null
+  },
+  {
+   "q": "What continent is Poland on?",
+   "answer": "europe",
+   "yn": null
+  },
+  {
+   "q": "Which continent is Jamaica part of?",
+   "answer": "north america",
+   "yn": null
+  },
+  {
+   "q": "Which continent is Uruguay on?",
+   "answer": "south america",
+   "yn": null
+  },
+  {
+   "q": "Which continent is Fiji in?",
+   "answer": "oceania",
+   "yn": null
+  },
+  {
+   "q": "What language is listed for Austria?",
+   "answer": "german",
+   "yn": null
+  },
+  {
+   "q": "Which language is used in Senegal?",
+   "answer": "french",
+   "yn": null
+  },
+  {
+   "q": "What's the language listed for South Korea?",
+   "answer": "korean",
+   "yn": null
+  },
+  {
+   "q": "Which country's language is Swahili?",
+   "answer": "tanzania",
+   "yn": null
+  },
+  {
+   "q": "What language is listed for Haiti?",
+   "answer": "creole",
+   "yn": null
+  },
+  {
+   "q": "Which language does Vanuatu use?",
+   "answer": "bislama",
+   "yn": null
+  },
+  {
+   "q": "What language is listed for Mozambique?",
+   "answer": "portuguese",
+   "yn": null
+  },
+  {
+   "q": "What's Japan's currency?",
+   "answer": "yen",
+   "yn": null
+  },
+  {
+   "q": "Currency used in Brazil?",
+   "answer": "brazilian real",
+   "yn": null
+  },
+  {
+   "q": "What money does South Korea use?",
+   "answer": "korean won",
+   "yn": null
+  },
+  {
+   "q": "What's the currency in Egypt?",
+   "answer": "pound",
+   "yn": null
+  },
+  {
+   "q": "Which currency does India use?",
+   "answer": "rupee",
+   "yn": null
+  },
+  {
+   "q": "What's Turkey's currency?",
+   "answer": "lira",
+   "yn": null
+  },
+  {
+   "q": "What currency does Vanuatu use?",
+   "answer": "vatu",
+   "yn": null
+  },
+  {
+   "q": "Is Algiers the capital of Algeria?",
+   "answer": "yes",
+   "yn": "yes"
+  },
+  {
+   "q": "Is Tokyo South Korea's capital, right?",
+   "answer": "no",
+   "yn": "no"
+  },
+  {
+   "q": "Does Brazil use the Brazilian real?",
+   "answer": "yes",
+   "yn": "yes"
+  },
+  {
+   "q": "Is Kenya's capital Nairobi?",
+   "answer": "yes",
+   "yn": "yes"
+  },
+  {
+   "q": "Is Egypt in Europe?",
+   "answer": "no",
+   "yn": "no"
+  },
+  {
+   "q": "Do they speak French in Senegal?",
+   "answer": "yes",
+   "yn": "yes"
+  },
+  {
+   "q": "Is Fiji part of Oceania?",
+   "answer": "yes",
+   "yn": "yes"
+  },
+  {
+   "q": "Is the capital of Canada Toronto?",
+   "answer": "no",
+   "yn": "no"
+  },
+  {
+   "q": "Is Sweden's currency the krona?",
+   "answer": "yes",
+   "yn": "yes"
+  },
+  {
+   "q": "Is Hindi the language listed for Pakistan?",
+   "answer": "no",
+   "yn": "no"
+  },
+  {
+   "q": "Is South Korea's listed currency the Korean won?",
+   "answer": "yes",
+   "yn": "yes"
+  },
+  {
+   "q": "Is Uruguay in North America?",
+   "answer": "no",
+   "yn": "no"
+  },
+  {
+   "q": "Is Brazil's capital Rio de Janeiro?",
+   "answer": "no",
+   "yn": "no"
+  },
+  {
+   "q": "Is the capital of Mexico Mexico City?",
+   "answer": "yes",
+   "yn": "yes"
+  },
+  {
+   "q": "Is Poland's currency the zloty?",
+   "answer": "yes",
+   "yn": "yes"
+  }
+ ],
+ "animals": [
+  {
+   "q": "Could you tell me what a horse's sound is?",
+   "answer": "neigh",
+   "yn": null
+  },
+  {
+   "q": "Does a fox bark?",
+   "answer": "yes",
+   "yn": "yes"
+  },
+  {
+   "q": "How many legs does a spider have?",
+   "answer": "8",
+   "yn": null
+  },
+  {
+   "q": "Is a bat a mammal?",
+   "answer": "yes",
+   "yn": "yes"
+  },
+  {
+   "q": "Which animal says quack?",
+   "answer": "duck",
+   "yn": null
+  },
+  {
+   "q": "What class is a penguin?",
+   "answer": "bird",
+   "yn": null
+  },
+  {
+   "q": "Do elephants live in jungles?",
+   "answer": "no",
+   "yn": "no"
+  },
+  {
+   "q": "What noise does a pig make?",
+   "answer": "oink",
+   "yn": null
+  },
+  {
+   "q": "How many legs has a bee got?",
+   "answer": "6",
+   "yn": null
+  },
+  {
+   "q": "Is a lion's sound a growl?",
+   "answer": "no",
+   "yn": "no"
+  },
+  {
+   "q": "Where do tigers live?",
+   "answer": "jungle",
+   "yn": null
+  },
+  {
+   "q": "What's a cat's diet?",
+   "answer": "carnivore",
+   "yn": null
+  },
+  {
+   "q": "Does a duck quack?",
+   "answer": "yes",
+   "yn": "yes"
+  },
+  {
+   "q": "Leg count for a dolphin?",
+   "answer": "0",
+   "yn": null
+  },
+  {
+   "q": "What class does a crocodile belong to?",
+   "answer": "reptile",
+   "yn": null
+  },
+  {
+   "q": "Which one honks?",
+   "answer": "goose",
+   "yn": null
+  },
+  {
+   "q": "Do bees have six legs?",
+   "answer": "yes",
+   "yn": "yes"
+  },
+  {
+   "q": "What's a giraffe's sound?",
+   "answer": "hum",
+   "yn": null
+  },
+  {
+   "q": "Is the spider's diet carnivore?",
+   "answer": "yes",
+   "yn": "yes"
+  },
+  {
+   "q": "Where do camels live?",
+   "answer": "desert",
+   "yn": null
+  },
+  {
+   "q": "What sound comes from a tiger?",
+   "answer": "growl",
+   "yn": null
+  },
+  {
+   "q": "Is a frog an amphibian?",
+   "answer": "yes",
+   "yn": "yes"
+  },
+  {
+   "q": "Which class is the goldfish in?",
+   "answer": "fish",
+   "yn": null
+  },
+  {
+   "q": "Which animal purrs?",
+   "answer": "capybara",
+   "yn": null
+  },
+  {
+   "q": "Do whales have any legs?",
+   "answer": "no",
+   "yn": "no"
+  },
+  {
+   "q": "What's a bear's diet?",
+   "answer": "omnivore",
+   "yn": null
+  },
+  {
+   "q": "hey, what sound does a cow make?",
+   "answer": "moo",
+   "yn": null
+  },
+  {
+   "q": "Is a dolphin a fish?",
+   "answer": "no",
+   "yn": "no"
+  },
+  {
+   "q": "How many legs does a chicken have?",
+   "answer": "2",
+   "yn": null
+  },
+  {
+   "q": "Which animal is known for hissing?",
+   "answer": "snake",
+   "yn": null
+  },
+  {
+   "q": "Does an owl live in the forest?",
+   "answer": "yes",
+   "yn": "yes"
+  },
+  {
+   "q": "What class is a spider?",
+   "answer": "arachnid",
+   "yn": null
+  },
+  {
+   "q": "What's a seal's habitat?",
+   "answer": "ocean",
+   "yn": null
+  },
+  {
+   "q": "Who whinnies?",
+   "answer": "zebra",
+   "yn": null
+  },
+  {
+   "q": "What's a goat's diet?",
+   "answer": "herbivore",
+   "yn": null
+  },
+  {
+   "q": "A bat \u2014 how many legs?",
+   "answer": "2",
+   "yn": null
+  },
+  {
+   "q": "Is a penguin a bird?",
+   "answer": "yes",
+   "yn": "yes"
+  },
+  {
+   "q": "What's the habitat of a walrus?",
+   "answer": "arctic",
+   "yn": null
+  },
+  {
+   "q": "What kind of eater is a cow?",
+   "answer": "herbivore",
+   "yn": null
+  },
+  {
+   "q": "What does a lion sound like?",
+   "answer": "roar",
+   "yn": null
+  }
+ ],
+ "lists": [
+  {
+   "q": "Which countries are in Africa?",
+   "list_of": "country",
+   "relation": "continent",
+   "value": "africa"
+  },
+  {
+   "q": "Hey, can you list the countries where Arabic is the language?",
+   "list_of": "country",
+   "relation": "language",
+   "value": "arabic"
+  },
+  {
+   "q": "Countries that use the dinar, please?",
+   "list_of": "country",
+   "relation": "currency",
+   "value": "dinar"
+  },
+  {
+   "q": "Which animals have four legs?",
+   "list_of": "animal",
+   "relation": "legs",
+   "value": 4
+  },
+  {
+   "q": "Hey, what animals are birds?",
+   "list_of": "animal",
+   "relation": "class",
+   "value": "bird"
+  },
+  {
+   "q": "Could I get the animals that live on farms?",
+   "list_of": "animal",
+   "relation": "habitat",
+   "value": "farm"
+  },
+  {
+   "q": "Which animals are carnivores?",
+   "list_of": "animal",
+   "relation": "diet",
+   "value": "carnivore"
+  },
+  {
+   "q": "What Asian countries are in the dataset?",
+   "list_of": "country",
+   "relation": "continent",
+   "value": "asia"
+  },
+  {
+   "q": "Which countries use the euro?",
+   "list_of": "country",
+   "relation": "currency",
+   "value": "euro"
+  },
+  {
+   "q": "Show me every country with English as its language.",
+   "list_of": "country",
+   "relation": "language",
+   "value": "english"
+  },
+  {
+   "q": "Which animals live in the ocean?",
+   "list_of": "animal",
+   "relation": "habitat",
+   "value": "ocean"
+  },
+  {
+   "q": "Any animals with no legs?",
+   "list_of": "animal",
+   "relation": "legs",
+   "value": 0
+  },
+  {
+   "q": "Which animals have eight legs?",
+   "list_of": "animal",
+   "relation": "legs",
+   "value": 8
+  },
+  {
+   "q": "Can you list the European countries?",
+   "list_of": "country",
+   "relation": "continent",
+   "value": "europe"
+  },
+  {
+   "q": "Which countries use the dollar, right?",
+   "list_of": "country",
+   "relation": "currency",
+   "value": "dollar"
+  },
+  {
+   "q": "Which animals are mammals?",
+   "list_of": "animal",
+   "relation": "class",
+   "value": "mammal"
+  },
+  {
+   "q": "List the animals with a herbivore diet, please.",
+   "list_of": "animal",
+   "relation": "diet",
+   "value": "herbivore"
+  },
+  {
+   "q": "Which animals have forest as their habitat?",
+   "list_of": "animal",
+   "relation": "habitat",
+   "value": "forest"
+  },
+  {
+   "q": "All the countries, please.",
+   "list_of": "country",
+   "relation": null,
+   "value": null
+  },
+  {
+   "q": "Hey, could you give me every animal in the dataset?",
+   "list_of": "animal",
+   "relation": null,
+   "value": null
+  },
+  {
+   "q": "What are all the capital cities?",
+   "list_of": "capital",
+   "relation": null,
+   "value": null
+  },
+  {
+   "q": "Which languages are listed?",
+   "list_of": "language",
+   "relation": null,
+   "value": null
+  },
+  {
+   "q": "What continents are represented?",
+   "list_of": "continent",
+   "relation": null,
+   "value": null
+  },
+  {
+   "q": "Can you list all the currencies?",
+   "list_of": "currency",
+   "relation": null,
+   "value": null
+  },
+  {
+   "q": "Just every country name, please.",
+   "list_of": "country",
+   "relation": null,
+   "value": null
+  }
+ ]
+}

@@ -1,0 +1,1034 @@
+{
+ "source": "MiniMax-M3 (2026-11-03), fresh batch written after the round-1 fixes, round 2 (blind)",
+ "geo": [
+  {
+   "q": "hey, what's the capital of algeria?",
+   "answer": "algiers",
+   "yn": null
+  },
+  {
+   "q": "egypt's capital city, pls?",
+   "answer": "cairo",
+   "yn": null
+  },
+  {
+   "q": "name ethiopia's capital",
+   "answer": "addis ababa",
+   "yn": null
+  },
+  {
+   "q": "which city serves as ghana's capital?",
+   "answer": "accra",
+   "yn": null
+  },
+  {
+   "q": "where's kenya's capital?",
+   "answer": "nairobi",
+   "yn": null
+  },
+  {
+   "q": "morocco's capital?",
+   "answer": "rabat",
+   "yn": null
+  },
+  {
+   "q": "capital of nigeria?",
+   "answer": "abuja",
+   "yn": null
+  },
+  {
+   "q": "what city is senegal's capital?",
+   "answer": "dakar",
+   "yn": null
+  },
+  {
+   "q": "tell me tanzania's capital",
+   "answer": "dodoma",
+   "yn": null
+  },
+  {
+   "q": "what's china's capital?",
+   "answer": "beijing",
+   "yn": null
+  },
+  {
+   "q": "which city is india's capital?",
+   "answer": "new delhi",
+   "yn": null
+  },
+  {
+   "q": "indonesia's capital city?",
+   "answer": "jakarta",
+   "yn": null
+  },
+  {
+   "q": "japan's capital, quick one?",
+   "answer": "tokyo",
+   "yn": null
+  },
+  {
+   "q": "what's the capital of saudi arabia?",
+   "answer": "riyadh",
+   "yn": null
+  },
+  {
+   "q": "south korea's capital city is what?",
+   "answer": "seoul",
+   "yn": null
+  },
+  {
+   "q": "name thailand's capital",
+   "answer": "bangkok",
+   "yn": null
+  },
+  {
+   "q": "tell me turkey's capital",
+   "answer": "ankara",
+   "yn": null
+  },
+  {
+   "q": "vietnam's capital?",
+   "answer": "hanoi",
+   "yn": null
+  },
+  {
+   "q": "what's france's capital?",
+   "answer": "paris",
+   "yn": null
+  },
+  {
+   "q": "germany's capital city?",
+   "answer": "berlin",
+   "yn": null
+  },
+  {
+   "q": "which city is greece's capital?",
+   "answer": "athens",
+   "yn": null
+  },
+  {
+   "q": "italy's capital?",
+   "answer": "rome",
+   "yn": null
+  },
+  {
+   "q": "capital of poland?",
+   "answer": "warsaw",
+   "yn": null
+  },
+  {
+   "q": "what city is portugal's capital?",
+   "answer": "lisbon",
+   "yn": null
+  },
+  {
+   "q": "madrid is the capital of which country?",
+   "answer": "spain",
+   "yn": null
+  },
+  {
+   "q": "which country has stockholm as its capital?",
+   "answer": "sweden",
+   "yn": null
+  },
+  {
+   "q": "london is a capital city belonging to which country?",
+   "answer": "united kingdom",
+   "yn": null
+  },
+  {
+   "q": "which country is ottawa the capital of?",
+   "answer": "canada",
+   "yn": null
+  },
+  {
+   "q": "which nation is san jose the capital of?",
+   "answer": "costa rica",
+   "yn": null
+  },
+  {
+   "q": "havana is the capital of where?",
+   "answer": "cuba",
+   "yn": null
+  },
+  {
+   "q": "santo domingo belongs to which country?",
+   "answer": "dominican republic",
+   "yn": null
+  },
+  {
+   "q": "which country has guatemala city as its capital?",
+   "answer": "guatemala",
+   "yn": null
+  },
+  {
+   "q": "which country is kingston the capital of?",
+   "answer": "jamaica",
+   "yn": null
+  },
+  {
+   "q": "what country is mexico city the capital of?",
+   "answer": "mexico",
+   "yn": null
+  },
+  {
+   "q": "washington is the capital of which country?",
+   "answer": "united states",
+   "yn": null
+  },
+  {
+   "q": "which country calls buenos aires its capital?",
+   "answer": "argentina",
+   "yn": null
+  },
+  {
+   "q": "brasilia is the capital of what country?",
+   "answer": "brazil",
+   "yn": null
+  },
+  {
+   "q": "santiago belongs to which nation?",
+   "answer": "chile",
+   "yn": null
+  },
+  {
+   "q": "which country has bogota as its capital?",
+   "answer": "colombia",
+   "yn": null
+  },
+  {
+   "q": "which country is quito the capital of?",
+   "answer": "ecuador",
+   "yn": null
+  },
+  {
+   "q": "what nation has lima as its capital?",
+   "answer": "peru",
+   "yn": null
+  },
+  {
+   "q": "which country is montevideo the capital of?",
+   "answer": "uruguay",
+   "yn": null
+  },
+  {
+   "q": "caracas is the capital of which country?",
+   "answer": "venezuela",
+   "yn": null
+  },
+  {
+   "q": "canberra is the capital of which country?",
+   "answer": "australia",
+   "yn": null
+  },
+  {
+   "q": "which nation has suva as its capital?",
+   "answer": "fiji",
+   "yn": null
+  },
+  {
+   "q": "which country is wellington the capital of?",
+   "answer": "new zealand",
+   "yn": null
+  },
+  {
+   "q": "what country has apia as its capital?",
+   "answer": "samoa",
+   "yn": null
+  },
+  {
+   "q": "port vila is the capital of where?",
+   "answer": "vanuatu",
+   "yn": null
+  },
+  {
+   "q": "which continent is morocco in?",
+   "answer": "africa",
+   "yn": null
+  },
+  {
+   "q": "ghana belongs to which continent?",
+   "answer": "africa",
+   "yn": null
+  },
+  {
+   "q": "what continent is turkey part of?",
+   "answer": "asia",
+   "yn": null
+  },
+  {
+   "q": "india sits on which continent?",
+   "answer": "asia",
+   "yn": null
+  },
+  {
+   "q": "sweden is on which continent?",
+   "answer": "europe",
+   "yn": null
+  },
+  {
+   "q": "which continent has the united kingdom?",
+   "answer": "europe",
+   "yn": null
+  },
+  {
+   "q": "what's canada's continent?",
+   "answer": "north america",
+   "yn": null
+  },
+  {
+   "q": "jamaica falls on which continent?",
+   "answer": "north america",
+   "yn": null
+  },
+  {
+   "q": "which continent is peru in?",
+   "answer": "south america",
+   "yn": null
+  },
+  {
+   "q": "argentina belongs to which continent?",
+   "answer": "south america",
+   "yn": null
+  },
+  {
+   "q": "what continent is australia on?",
+   "answer": "oceania",
+   "yn": null
+  },
+  {
+   "q": "new zealand is part of which continent?",
+   "answer": "oceania",
+   "yn": null
+  },
+  {
+   "q": "what language is listed for senegal?",
+   "answer": "french",
+   "yn": null
+  },
+  {
+   "q": "which language is listed for tanzania?",
+   "answer": "swahili",
+   "yn": null
+  },
+  {
+   "q": "china's language in this dataset?",
+   "answer": "chinese",
+   "yn": null
+  },
+  {
+   "q": "name the language listed for south korea",
+   "answer": "korean",
+   "yn": null
+  },
+  {
+   "q": "what language does greece have listed?",
+   "answer": "greek",
+   "yn": null
+  },
+  {
+   "q": "which language is associated with poland?",
+   "answer": "polish",
+   "yn": null
+  },
+  {
+   "q": "what's brazil's listed language?",
+   "answer": "portuguese",
+   "yn": null
+  },
+  {
+   "q": "the language listed for the united states is?",
+   "answer": "english",
+   "yn": null
+  },
+  {
+   "q": "which language is listed for samoa?",
+   "answer": "samoan",
+   "yn": null
+  },
+  {
+   "q": "name vanuatu's language",
+   "answer": "bislama",
+   "yn": null
+  },
+  {
+   "q": "hey, is algiers the capital of algeria?",
+   "answer": "algiers",
+   "yn": "yes"
+  },
+  {
+   "q": "does ghana use english?",
+   "answer": "english",
+   "yn": "yes"
+  },
+  {
+   "q": "would you say kenya is in africa?",
+   "answer": "africa",
+   "yn": "yes"
+  },
+  {
+   "q": "tokyo really japan's capital?",
+   "answer": "tokyo",
+   "yn": "yes"
+  },
+  {
+   "q": "quick check: is brazil in south america?",
+   "answer": "south america",
+   "yn": "yes"
+  },
+  {
+   "q": "is vietnam's listed language vietnamese?",
+   "answer": "vietnamese",
+   "yn": "yes"
+  },
+  {
+   "q": "canberra actually australia's capital?",
+   "answer": "canberra",
+   "yn": "yes"
+  },
+  {
+   "q": "is seoul south korea's capital?",
+   "answer": "seoul",
+   "yn": "yes"
+  },
+  {
+   "q": "ottawa canada's capital, yes?",
+   "answer": "ottawa",
+   "yn": "yes"
+  },
+  {
+   "q": "mexico's language is spanish?",
+   "answer": "spanish",
+   "yn": "yes"
+  },
+  {
+   "q": "does port vila serve as vanuatu's capital?",
+   "answer": "port vila",
+   "yn": "yes"
+  },
+  {
+   "q": "is new zealand in oceania?",
+   "answer": "oceania",
+   "yn": "yes"
+  },
+  {
+   "q": "athens is greece's capital, isn't it?",
+   "answer": "athens",
+   "yn": "yes"
+  },
+  {
+   "q": "quito the capital of ecuador?",
+   "answer": "quito",
+   "yn": "yes"
+  },
+  {
+   "q": "india\u2019s language is hindi here, right?",
+   "answer": "hindi",
+   "yn": "yes"
+  },
+  {
+   "q": "is cairo the capital of algeria?",
+   "answer": "algiers",
+   "yn": "no"
+  },
+  {
+   "q": "does kenya use arabic?",
+   "answer": "english",
+   "yn": "no"
+  },
+  {
+   "q": "france belongs to africa, doesn't it?",
+   "answer": "europe",
+   "yn": "no"
+  },
+  {
+   "q": "is tokyo the capital of china?",
+   "answer": "beijing",
+   "yn": "no"
+  },
+  {
+   "q": "brazil's language is spanish, right?",
+   "answer": "portuguese",
+   "yn": "no"
+  },
+  {
+   "q": "is ottawa located in europe?",
+   "answer": "north america",
+   "yn": "no"
+  },
+  {
+   "q": "does portugal have madrid as its capital?",
+   "answer": "lisbon",
+   "yn": "no"
+  },
+  {
+   "q": "is cairo morocco's capital?",
+   "answer": "rabat",
+   "yn": "no"
+  },
+  {
+   "q": "is santiago the capital of peru?",
+   "answer": "lima",
+   "yn": "no"
+  },
+  {
+   "q": "is kenya's listed language hindi?",
+   "answer": "english",
+   "yn": "no"
+  },
+  {
+   "q": "does samoa have suva as its capital?",
+   "answer": "apia",
+   "yn": "no"
+  },
+  {
+   "q": "would you place mexico in south america?",
+   "answer": "north america",
+   "yn": "no"
+  },
+  {
+   "q": "is tokyo south korea's capital?",
+   "answer": "seoul",
+   "yn": "no"
+  },
+  {
+   "q": "caracas is colombia's capital?",
+   "answer": "bogota",
+   "yn": "no"
+  },
+  {
+   "q": "egypt's language is english?",
+   "answer": "arabic",
+   "yn": "no"
+  }
+ ],
+ "animals": [
+  {
+   "q": "Hey, what's the sound a cow makes?",
+   "answer": "moo",
+   "yn": null
+  },
+  {
+   "q": "What noise comes out of a dog?",
+   "answer": "woof",
+   "yn": null
+  },
+  {
+   "q": "Cat sound?",
+   "answer": "meow",
+   "yn": null
+  },
+  {
+   "q": "Hey, what does a horse sound like?",
+   "answer": "neigh",
+   "yn": null
+  },
+  {
+   "q": "What's a pig's sound?",
+   "answer": "oink",
+   "yn": null
+  },
+  {
+   "q": "What noise does a sheep make?",
+   "answer": "baa",
+   "yn": null
+  },
+  {
+   "q": "tell me what a goat sounds like",
+   "answer": "bleat",
+   "yn": null
+  },
+  {
+   "q": "What sound comes from a lion?",
+   "answer": "roar",
+   "yn": null
+  },
+  {
+   "q": "A tiger makes what noise?",
+   "answer": "growl",
+   "yn": null
+  },
+  {
+   "q": "What's the bear's sound?",
+   "answer": "snarl",
+   "yn": null
+  },
+  {
+   "q": "What does a wolf sound like?",
+   "answer": "howl",
+   "yn": null
+  },
+  {
+   "q": "Mouse noise?",
+   "answer": "squeak",
+   "yn": null
+  },
+  {
+   "q": "what sound does a rabbit make",
+   "answer": "thump",
+   "yn": null
+  },
+  {
+   "q": "What's an elephant's sound?",
+   "answer": "trumpet",
+   "yn": null
+  },
+  {
+   "q": "What noise do monkeys make?",
+   "answer": "chatter",
+   "yn": null
+  },
+  {
+   "q": "What does a donkey sound like?",
+   "answer": "bray",
+   "yn": null
+  },
+  {
+   "q": "Camel sound?",
+   "answer": "grunt",
+   "yn": null
+  },
+  {
+   "q": "What's the sound of a bat?",
+   "answer": "screech",
+   "yn": null
+  },
+  {
+   "q": "What does a dolphin make?",
+   "answer": "click",
+   "yn": null
+  },
+  {
+   "q": "What sound does a whale make?",
+   "answer": "moan",
+   "yn": null
+  },
+  {
+   "q": "Which animal goes 'bark'?",
+   "answer": "fox",
+   "yn": null
+  },
+  {
+   "q": "Who makes a squeal?",
+   "answer": "raccoon",
+   "yn": null
+  },
+  {
+   "q": "Which one clucks?",
+   "answer": "chicken",
+   "yn": null
+  },
+  {
+   "q": "What animal says quack?",
+   "answer": "duck",
+   "yn": null
+  },
+  {
+   "q": "Who honks?",
+   "answer": "goose",
+   "yn": null
+  },
+  {
+   "q": "Which animal goes hoot?",
+   "answer": "owl",
+   "yn": null
+  },
+  {
+   "q": "Who caws?",
+   "answer": "crow",
+   "yn": null
+  },
+  {
+   "q": "Which animal chirps?",
+   "answer": "sparrow",
+   "yn": null
+  },
+  {
+   "q": "What animal squawks?",
+   "answer": "seagull",
+   "yn": null
+  },
+  {
+   "q": "Which creature hisses?",
+   "answer": "snake",
+   "yn": null
+  },
+  {
+   "q": "Who makes a bellow?",
+   "answer": "crocodile",
+   "yn": null
+  },
+  {
+   "q": "Which animal croaks?",
+   "answer": "frog",
+   "yn": null
+  },
+  {
+   "q": "How many legs does a bee have?",
+   "answer": "6",
+   "yn": null
+  },
+  {
+   "q": "Leg count for a spider?",
+   "answer": "8",
+   "yn": null
+  },
+  {
+   "q": "How many legs has a bat got?",
+   "answer": "2",
+   "yn": null
+  },
+  {
+   "q": "How many legs does a chicken have?",
+   "answer": "2",
+   "yn": null
+  },
+  {
+   "q": "What's the leg count on a dolphin?",
+   "answer": "0",
+   "yn": null
+  },
+  {
+   "q": "How many legs does a whale have?",
+   "answer": "0",
+   "yn": null
+  },
+  {
+   "q": "Tell me how many legs a cow has.",
+   "answer": "4",
+   "yn": null
+  },
+  {
+   "q": "How many legs does a horse have?",
+   "answer": "4",
+   "yn": null
+  },
+  {
+   "q": "What's the number of legs on a crocodile?",
+   "answer": "4",
+   "yn": null
+  },
+  {
+   "q": "How many legs does a goldfish have?",
+   "answer": "0",
+   "yn": null
+  },
+  {
+   "q": "What class of animal is a dog?",
+   "answer": "mammal",
+   "yn": null
+  },
+  {
+   "q": "Which class does a chicken belong to?",
+   "answer": "bird",
+   "yn": null
+  },
+  {
+   "q": "What's the class for a snake?",
+   "answer": "reptile",
+   "yn": null
+  },
+  {
+   "q": "What animal class is a frog?",
+   "answer": "amphibian",
+   "yn": null
+  },
+  {
+   "q": "Which class is the goldfish in?",
+   "answer": "fish",
+   "yn": null
+  },
+  {
+   "q": "What class does a bee belong to?",
+   "answer": "insect",
+   "yn": null
+  },
+  {
+   "q": "What's a spider's class?",
+   "answer": "arachnid",
+   "yn": null
+  },
+  {
+   "q": "Which class is a bat?",
+   "answer": "mammal",
+   "yn": null
+  },
+  {
+   "q": "Does a cow have 4 legs?",
+   "answer": "4",
+   "yn": "yes"
+  },
+  {
+   "q": "Is a pig's sound moo?",
+   "answer": "oink",
+   "yn": "no"
+  },
+  {
+   "q": "Is a duck a bird?",
+   "answer": "bird",
+   "yn": "yes"
+  },
+  {
+   "q": "Do elephants have 0 legs?",
+   "answer": "4",
+   "yn": "no"
+  },
+  {
+   "q": "Does a bee have 6 legs?",
+   "answer": "6",
+   "yn": "yes"
+  },
+  {
+   "q": "Is a goldfish a mammal?",
+   "answer": "fish",
+   "yn": "no"
+  },
+  {
+   "q": "Does an owl hoot?",
+   "answer": "hoot",
+   "yn": "yes"
+  },
+  {
+   "q": "Does a horse bray?",
+   "answer": "neigh",
+   "yn": "no"
+  },
+  {
+   "q": "Is a spider an arachnid?",
+   "answer": "arachnid",
+   "yn": "yes"
+  },
+  {
+   "q": "Do wolves growl?",
+   "answer": "howl",
+   "yn": "no"
+  },
+  {
+   "q": "Does a camel grunt?",
+   "answer": "grunt",
+   "yn": "yes"
+  },
+  {
+   "q": "Is a tiger a bird?",
+   "answer": "mammal",
+   "yn": "no"
+  },
+  {
+   "q": "Does a dolphin click?",
+   "answer": "click",
+   "yn": "yes"
+  },
+  {
+   "q": "Do frogs have 8 legs?",
+   "answer": "4",
+   "yn": "no"
+  },
+  {
+   "q": "Is a sheep a mammal?",
+   "answer": "mammal",
+   "yn": "yes"
+  },
+  {
+   "q": "Does a rabbit squeak?",
+   "answer": "thump",
+   "yn": "no"
+  },
+  {
+   "q": "Does a seagull squawk?",
+   "answer": "squawk",
+   "yn": "yes"
+  },
+  {
+   "q": "Is a crocodile an amphibian?",
+   "answer": "reptile",
+   "yn": "no"
+  },
+  {
+   "q": "Does a donkey bray?",
+   "answer": "bray",
+   "yn": "yes"
+  },
+  {
+   "q": "Do bats have 4 legs?",
+   "answer": "2",
+   "yn": "no"
+  }
+ ],
+ "opposites": [
+  {
+   "q": "is cold the opposite of hot?",
+   "answer": "yes",
+   "yn": "yes"
+  },
+  {
+   "q": "hey, what's the antonym of big?",
+   "answer": "small",
+   "yn": null
+  },
+  {
+   "q": "old's opposite, what's the word?",
+   "answer": "new",
+   "yn": null
+  },
+  {
+   "q": "what's good's opposite, anyhow?",
+   "answer": "bad",
+   "yn": null
+  },
+  {
+   "q": "happy's opposite, please",
+   "answer": "sad",
+   "yn": null
+  },
+  {
+   "q": "easy - what word goes the other way?",
+   "answer": "difficult",
+   "yn": null
+  },
+  {
+   "q": "right's antonym?",
+   "answer": "wrong",
+   "yn": null
+  },
+  {
+   "q": "does near mean the opposite of far?",
+   "answer": "yes",
+   "yn": "yes"
+  },
+  {
+   "q": "what word is the opposite of fast?",
+   "answer": "slow",
+   "yn": null
+  },
+  {
+   "q": "early - what's the other word?",
+   "answer": "late",
+   "yn": null
+  },
+  {
+   "q": "high's opposite?",
+   "answer": "low",
+   "yn": null
+  },
+  {
+   "q": "long's opposite, pls",
+   "answer": "short",
+   "yn": null
+  },
+  {
+   "q": "strong's opposite?",
+   "answer": "weak",
+   "yn": null
+  },
+  {
+   "q": "what's rich's opposite?",
+   "answer": "poor",
+   "yn": null
+  },
+  {
+   "q": "clean's antonym?",
+   "answer": "dirty",
+   "yn": null
+  },
+  {
+   "q": "is dry the opposite of wet?",
+   "answer": "yes",
+   "yn": "yes"
+  },
+  {
+   "q": "what's open's opposite?",
+   "answer": "closed",
+   "yn": null
+  },
+  {
+   "q": "full's opposite, please",
+   "answer": "empty",
+   "yn": null
+  },
+  {
+   "q": "light's opposite?",
+   "answer": "heavy",
+   "yn": null
+  },
+  {
+   "q": "black's opposite white, right?",
+   "answer": "yes",
+   "yn": "yes"
+  },
+  {
+   "q": "sweet's opposite?",
+   "answer": "bitter",
+   "yn": null
+  },
+  {
+   "q": "fresh's antonym?",
+   "answer": "stale",
+   "yn": null
+  },
+  {
+   "q": "sharp's other side?",
+   "answer": "dull",
+   "yn": null
+  },
+  {
+   "q": "smooth's opposite?",
+   "answer": "rough",
+   "yn": null
+  },
+  {
+   "q": "would you say tight is the opposite of loose?",
+   "answer": "yes",
+   "yn": "yes"
+  },
+  {
+   "q": "warm's opposite?",
+   "answer": "cool",
+   "yn": null
+  },
+  {
+   "q": "wide's antonym?",
+   "answer": "narrow",
+   "yn": null
+  },
+  {
+   "q": "thick's opposite?",
+   "answer": "thin",
+   "yn": null
+  },
+  {
+   "q": "is deep the opposite of shallow?",
+   "answer": "yes",
+   "yn": "yes"
+  },
+  {
+   "q": "loud's opposite?",
+   "answer": "quiet",
+   "yn": null
+  },
+  {
+   "q": "pretty's opposite?",
+   "answer": "ugly",
+   "yn": null
+  },
+  {
+   "q": "expensive's opposite?",
+   "answer": "cheap",
+   "yn": null
+  },
+  {
+   "q": "same's opposite?",
+   "answer": "different",
+   "yn": null
+  },
+  {
+   "q": "is safe the opposite of dangerous?",
+   "answer": "yes",
+   "yn": "yes"
+  },
+  {
+   "q": "is warm the opposite of hot?",
+   "answer": "no",
+   "yn": "no"
+  }
+ ]
+}

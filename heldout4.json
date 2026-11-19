@@ -1,0 +1,799 @@
+{
+ "source": "MiniMax-M3 (2026-11-03), after batch-2 facts + list circuit, round 4 (blind)",
+ "geo": [
+  {
+   "q": "What currency does Algeria use?",
+   "answer": "dinar",
+   "yn": null
+  },
+  {
+   "q": "Egypt's currency, please?",
+   "answer": "pound",
+   "yn": null
+  },
+  {
+   "q": "Hey, what's Ghana's currency?",
+   "answer": "cedi",
+   "yn": null
+  },
+  {
+   "q": "Which currency is used in Kenya, right?",
+   "answer": "shilling",
+   "yn": null
+  },
+  {
+   "q": "Morocco uses which currency?",
+   "answer": "dirham",
+   "yn": null
+  },
+  {
+   "q": "Quick one: what is Nigeria's currency?",
+   "answer": "naira",
+   "yn": null
+  },
+  {
+   "q": "China's currency?",
+   "answer": "yuan",
+   "yn": null
+  },
+  {
+   "q": "What currency does India use, please?",
+   "answer": "rupee",
+   "yn": null
+  },
+  {
+   "q": "Currency in Indonesia, right?",
+   "answer": "rupiah",
+   "yn": null
+  },
+  {
+   "q": "Hey, what's Japan's currency?",
+   "answer": "yen",
+   "yn": null
+  },
+  {
+   "q": "What currency does South Korea use?",
+   "answer": "korean won",
+   "yn": null
+  },
+  {
+   "q": "Turkey's currency, please?",
+   "answer": "lira",
+   "yn": null
+  },
+  {
+   "q": "Which currency is used in Costa Rica?",
+   "answer": "colon",
+   "yn": null
+  },
+  {
+   "q": "What's Guatemala's currency?",
+   "answer": "quetzal",
+   "yn": null
+  },
+  {
+   "q": "Hey, Brazil's currency?",
+   "answer": "brazilian real",
+   "yn": null
+  },
+  {
+   "q": "What currency does Samoa use?",
+   "answer": "tala",
+   "yn": null
+  },
+  {
+   "q": "Vanuatu's currency?",
+   "answer": "vatu",
+   "yn": null
+  },
+  {
+   "q": "Which currency is used in Angola?",
+   "answer": "kwanza",
+   "yn": null
+  },
+  {
+   "q": "Tunisia uses which currency?",
+   "answer": "dinar",
+   "yn": null
+  },
+  {
+   "q": "Hi, what's Uganda's currency?",
+   "answer": "shilling",
+   "yn": null
+  },
+  {
+   "q": "What's Zambia's currency?",
+   "answer": "kwacha",
+   "yn": null
+  },
+  {
+   "q": "Quick one: Mozambique's currency?",
+   "answer": "metrical",
+   "yn": null
+  },
+  {
+   "q": "Which currency does Somalia use?",
+   "answer": "shilling",
+   "yn": null
+  },
+  {
+   "q": "Malawi's currency?",
+   "answer": "kwacha",
+   "yn": null
+  },
+  {
+   "q": "What currency does Pakistan use?",
+   "answer": "rupee",
+   "yn": null
+  },
+  {
+   "q": "Hey, Bangladesh's currency?",
+   "answer": "taka",
+   "yn": null
+  },
+  {
+   "q": "Myanmar's currency, please?",
+   "answer": "kyat",
+   "yn": null
+  },
+  {
+   "q": "Jordan uses which currency?",
+   "answer": "dinar",
+   "yn": null
+  },
+  {
+   "q": "Romania's currency, right?",
+   "answer": "leu",
+   "yn": null
+  },
+  {
+   "q": "What's Micronesia's currency?",
+   "answer": "dollar",
+   "yn": null
+  },
+  {
+   "q": "What's the capital of the Bahamas?",
+   "answer": "nassau",
+   "yn": null
+  },
+  {
+   "q": "Where's the capital of Barbados?",
+   "answer": "bridgetown",
+   "yn": null
+  },
+  {
+   "q": "Haiti's capital, please?",
+   "answer": "port au prince",
+   "yn": null
+  },
+  {
+   "q": "Capital of Honduras?",
+   "answer": "tegucigalpa",
+   "yn": null
+  },
+  {
+   "q": "Hey, Trinidad and Tobago's capital?",
+   "answer": "port of spain",
+   "yn": null
+  },
+  {
+   "q": "What is Nicaragua's capital, right?",
+   "answer": "managua",
+   "yn": null
+  },
+  {
+   "q": "Guyana's capital city?",
+   "answer": "georgetown",
+   "yn": null
+  },
+  {
+   "q": "Which city is Paraguay's capital?",
+   "answer": "asuncion",
+   "yn": null
+  },
+  {
+   "q": "Suriname's capital, please?",
+   "answer": "paramaribo",
+   "yn": null
+  },
+  {
+   "q": "What's the capital of the Solomon Islands?",
+   "answer": "honiara",
+   "yn": null
+  },
+  {
+   "q": "Tonga's capital city?",
+   "answer": "nuku alofa",
+   "yn": null
+  },
+  {
+   "q": "Kiribati's capital, right?",
+   "answer": "south tarawa",
+   "yn": null
+  },
+  {
+   "q": "Hey, what is Tuvalu's capital?",
+   "answer": "funafuti",
+   "yn": null
+  },
+  {
+   "q": "Marshall Islands capital?",
+   "answer": "majuro",
+   "yn": null
+  },
+  {
+   "q": "Micronesia's capital, please?",
+   "answer": "palikir",
+   "yn": null
+  },
+  {
+   "q": "Is Angola's currency the kwanza?",
+   "answer": "yes",
+   "yn": "yes"
+  },
+  {
+   "q": "Is Uganda's currency the dinar?",
+   "answer": "no",
+   "yn": "no"
+  },
+  {
+   "q": "Does Zambia use the kwacha?",
+   "answer": "yes",
+   "yn": "yes"
+  },
+  {
+   "q": "Is Somalia's capital Kampala?",
+   "answer": "no",
+   "yn": "no"
+  },
+  {
+   "q": "Is Pakistan's currency the rupee?",
+   "answer": "yes",
+   "yn": "yes"
+  },
+  {
+   "q": "Is Bangladesh's capital Islamabad?",
+   "answer": "no",
+   "yn": "no"
+  },
+  {
+   "q": "Is Myanmar's capital Naypyidaw?",
+   "answer": "yes",
+   "yn": "yes"
+  },
+  {
+   "q": "Is Jordan's currency the riyal?",
+   "answer": "no",
+   "yn": "no"
+  },
+  {
+   "q": "Is Qatar's currency the riyal?",
+   "answer": "yes",
+   "yn": "yes"
+  },
+  {
+   "q": "Is Romania's capital Kyiv?",
+   "answer": "no",
+   "yn": "no"
+  },
+  {
+   "q": "Is Hungary's currency the forint?",
+   "answer": "yes",
+   "yn": "yes"
+  },
+  {
+   "q": "Is Ukraine's currency the ruble?",
+   "answer": "no",
+   "yn": "no"
+  },
+  {
+   "q": "Is Nicaragua's currency the cordoba?",
+   "answer": "yes",
+   "yn": "yes"
+  },
+  {
+   "q": "Is Suriname's currency the euro?",
+   "answer": "no",
+   "yn": "no"
+  },
+  {
+   "q": "Is Micronesia's capital Palikir?",
+   "answer": "yes",
+   "yn": "yes"
+  }
+ ],
+ "animals": [
+  {
+   "q": "Does a cow live on a farm?",
+   "answer": "yes",
+   "yn": "yes"
+  },
+  {
+   "q": "Where do dogs live?",
+   "answer": "house",
+   "yn": null
+  },
+  {
+   "q": "What's the cat's diet?",
+   "answer": "carnivore",
+   "yn": null
+  },
+  {
+   "q": "Is a horse's habitat the ocean?",
+   "answer": "no",
+   "yn": "no"
+  },
+  {
+   "q": "Hey, what's the pig's diet?",
+   "answer": "omnivore",
+   "yn": null
+  },
+  {
+   "q": "Where do tigers live?",
+   "answer": "jungle",
+   "yn": null
+  },
+  {
+   "q": "Do bears live in forests?",
+   "answer": "yes",
+   "yn": "yes"
+  },
+  {
+   "q": "What kind of eater is a wolf?",
+   "answer": "carnivore",
+   "yn": null
+  },
+  {
+   "q": "What does a mouse eat?",
+   "answer": "omnivore",
+   "yn": null
+  },
+  {
+   "q": "Do rabbits live in the house?",
+   "answer": "no",
+   "yn": "no"
+  },
+  {
+   "q": "Where do elephants live?",
+   "answer": "savanna",
+   "yn": null
+  },
+  {
+   "q": "What do monkeys eat?",
+   "answer": "omnivore",
+   "yn": null
+  },
+  {
+   "q": "Are donkeys herbivores?",
+   "answer": "yes",
+   "yn": "yes"
+  },
+  {
+   "q": "Where do camels live, if you don't mind?",
+   "answer": "desert",
+   "yn": null
+  },
+  {
+   "q": "What does a bat eat?",
+   "answer": "insectivore",
+   "yn": null
+  },
+  {
+   "q": "Quick question: where do dolphins live?",
+   "answer": "ocean",
+   "yn": null
+  },
+  {
+   "q": "Do whales live in the ocean?",
+   "answer": "yes",
+   "yn": "yes"
+  },
+  {
+   "q": "What do foxes eat?",
+   "answer": "omnivore",
+   "yn": null
+  },
+  {
+   "q": "Where do raccoons live?",
+   "answer": "forest",
+   "yn": null
+  },
+  {
+   "q": "Are seagulls herbivores?",
+   "answer": "no",
+   "yn": "no"
+  },
+  {
+   "q": "What do chickens eat?",
+   "answer": "omnivore",
+   "yn": null
+  },
+  {
+   "q": "Where do ducks live?",
+   "answer": "farm",
+   "yn": null
+  },
+  {
+   "q": "What do geese eat?",
+   "answer": "herbivore",
+   "yn": null
+  },
+  {
+   "q": "Is an owl a carnivore?",
+   "answer": "yes",
+   "yn": "yes"
+  },
+  {
+   "q": "Where do crows live, right?",
+   "answer": "grassland",
+   "yn": null
+  },
+  {
+   "q": "What do sparrows eat?",
+   "answer": "omnivore",
+   "yn": null
+  },
+  {
+   "q": "Do snakes live on a farm?",
+   "answer": "no",
+   "yn": "no"
+  },
+  {
+   "q": "Where do crocodiles live?",
+   "answer": "river",
+   "yn": null
+  },
+  {
+   "q": "What do frogs eat?",
+   "answer": "insectivore",
+   "yn": null
+  },
+  {
+   "q": "Where do goldfish live?",
+   "answer": "house",
+   "yn": null
+  },
+  {
+   "q": "Are goldfish omnivores?",
+   "answer": "yes",
+   "yn": "yes"
+  },
+  {
+   "q": "What do bees eat?",
+   "answer": "herbivore",
+   "yn": null
+  },
+  {
+   "q": "Where do spiders live?",
+   "answer": "forest",
+   "yn": null
+  },
+  {
+   "q": "What do zebras eat?",
+   "answer": "herbivore",
+   "yn": null
+  },
+  {
+   "q": "Do giraffes live in the jungle?",
+   "answer": "no",
+   "yn": "no"
+  },
+  {
+   "q": "Where do rhinoceroses live?",
+   "answer": "savanna",
+   "yn": null
+  },
+  {
+   "q": "What do hippopotamuses eat?",
+   "answer": "herbivore",
+   "yn": null
+  },
+  {
+   "q": "Where do seals live?",
+   "answer": "ocean",
+   "yn": null
+  },
+  {
+   "q": "Is a hyena a carnivore?",
+   "answer": "yes",
+   "yn": "yes"
+  },
+  {
+   "q": "Where do koalas live?",
+   "answer": "forest",
+   "yn": null
+  },
+  {
+   "q": "What do kangaroos eat?",
+   "answer": "herbivore",
+   "yn": null
+  },
+  {
+   "q": "Where do capybaras live?",
+   "answer": "river",
+   "yn": null
+  },
+  {
+   "q": "Do elk live in the desert?",
+   "answer": "no",
+   "yn": "no"
+  },
+  {
+   "q": "What do meerkats eat?",
+   "answer": "insectivore",
+   "yn": null
+  },
+  {
+   "q": "Where do gorillas live?",
+   "answer": "jungle",
+   "yn": null
+  },
+  {
+   "q": "What do gibbons eat?",
+   "answer": "omnivore",
+   "yn": null
+  },
+  {
+   "q": "Do walruses live in the Arctic?",
+   "answer": "yes",
+   "yn": "yes"
+  },
+  {
+   "q": "Could you tell me where otters live?",
+   "answer": "river",
+   "yn": null
+  },
+  {
+   "q": "What do porcupines eat?",
+   "answer": "herbivore",
+   "yn": null
+  },
+  {
+   "q": "Are penguins herbivores?",
+   "answer": "no",
+   "yn": "no"
+  }
+ ],
+ "lists": [
+  {
+   "q": "Hey, which countries are in Asia?",
+   "list_of": "country",
+   "relation": "continent",
+   "value": "asia"
+  },
+  {
+   "q": "Hi, which animals are mammals?",
+   "list_of": "animal",
+   "relation": "class",
+   "value": "mammal"
+  },
+  {
+   "q": "Which countries use the dollar as their currency?",
+   "list_of": "country",
+   "relation": "currency",
+   "value": "dollar"
+  },
+  {
+   "q": "Could you list any animals with eight legs?",
+   "list_of": "animal",
+   "relation": "legs",
+   "value": 8
+  },
+  {
+   "q": "Which countries have Arabic as their language?",
+   "list_of": "country",
+   "relation": "language",
+   "value": "arabic"
+  },
+  {
+   "q": "Which animals live in the ocean?",
+   "list_of": "animal",
+   "relation": "habitat",
+   "value": "ocean"
+  },
+  {
+   "q": "What countries are in Africa?",
+   "list_of": "country",
+   "relation": "continent",
+   "value": "africa"
+  },
+  {
+   "q": "Which animals are carnivores?",
+   "list_of": "animal",
+   "relation": "diet",
+   "value": "carnivore"
+  },
+  {
+   "q": "Which countries use the euro?",
+   "list_of": "country",
+   "relation": "currency",
+   "value": "euro"
+  },
+  {
+   "q": "What animals have no legs?",
+   "list_of": "animal",
+   "relation": "legs",
+   "value": 0
+  },
+  {
+   "q": "Which countries speak French?",
+   "list_of": "country",
+   "relation": "language",
+   "value": "french"
+  },
+  {
+   "q": "Which animals are birds, right?",
+   "list_of": "animal",
+   "relation": "class",
+   "value": "bird"
+  },
+  {
+   "q": "What countries use the dinar?",
+   "list_of": "country",
+   "relation": "currency",
+   "value": "dinar"
+  },
+  {
+   "q": "Which animals live on farms?",
+   "list_of": "animal",
+   "relation": "habitat",
+   "value": "farm"
+  },
+  {
+   "q": "Which countries have Hindi as their language?",
+   "list_of": "country",
+   "relation": "language",
+   "value": "hindi"
+  },
+  {
+   "q": "Which animals have six legs?",
+   "list_of": "animal",
+   "relation": "legs",
+   "value": 6
+  },
+  {
+   "q": "What countries are in North America?",
+   "list_of": "country",
+   "relation": "continent",
+   "value": "north america"
+  },
+  {
+   "q": "Which animals are herbivores?",
+   "list_of": "animal",
+   "relation": "diet",
+   "value": "herbivore"
+  },
+  {
+   "q": "Which countries are in South America?",
+   "list_of": "country",
+   "relation": "continent",
+   "value": "south america"
+  },
+  {
+   "q": "Which animals live in forests?",
+   "list_of": "animal",
+   "relation": "habitat",
+   "value": "forest"
+  },
+  {
+   "q": "Which countries' currency is the peso?",
+   "list_of": "country",
+   "relation": "currency",
+   "value": "peso"
+  },
+  {
+   "q": "Which animals are reptiles?",
+   "list_of": "animal",
+   "relation": "class",
+   "value": "reptile"
+  },
+  {
+   "q": "What countries are in Oceania, right?",
+   "list_of": "country",
+   "relation": "continent",
+   "value": "oceania"
+  },
+  {
+   "q": "Which animals have two legs?",
+   "list_of": "animal",
+   "relation": "legs",
+   "value": 2
+  },
+  {
+   "q": "Which countries use the pound?",
+   "list_of": "country",
+   "relation": "currency",
+   "value": "pound"
+  },
+  {
+   "q": "Which animals are amphibians?",
+   "list_of": "animal",
+   "relation": "class",
+   "value": "amphibian"
+  },
+  {
+   "q": "Which countries use the dirham?",
+   "list_of": "country",
+   "relation": "currency",
+   "value": "dirham"
+  },
+  {
+   "q": "Which animals are insects?",
+   "list_of": "animal",
+   "relation": "class",
+   "value": "insect"
+  },
+  {
+   "q": "Which countries speak Portuguese?",
+   "list_of": "country",
+   "relation": "language",
+   "value": "portuguese"
+  },
+  {
+   "q": "Which animals live in grasslands?",
+   "list_of": "animal",
+   "relation": "habitat",
+   "value": "grassland"
+  },
+  {
+   "q": "What countries do you know?",
+   "list_of": "country",
+   "relation": null,
+   "value": null
+  },
+  {
+   "q": "List every animal you know.",
+   "list_of": "animal",
+   "relation": null,
+   "value": null
+  },
+  {
+   "q": "What capitals do you know?",
+   "list_of": "capital",
+   "relation": null,
+   "value": null
+  },
+  {
+   "q": "Which languages do you have?",
+   "list_of": "language",
+   "relation": null,
+   "value": null
+  },
+  {
+   "q": "What continents can you list?",
+   "list_of": "continent",
+   "relation": null,
+   "value": null
+  },
+  {
+   "q": "List the currencies you know.",
+   "list_of": "currency",
+   "relation": null,
+   "value": null
+  },
+  {
+   "q": "Could you name all the countries, please?",
+   "list_of": "country",
+   "relation": null,
+   "value": null
+  },
+  {
+   "q": "Hey, what animals are there?",
+   "list_of": "animal",
+   "relation": null,
+   "value": null
+  },
+  {
+   "q": "Tell me all the capital cities.",
+   "list_of": "capital",
+   "relation": null,
+   "value": null
+  },
+  {
+   "q": "Which currencies can you list?",
+   "list_of": "currency",
+   "relation": null,
+   "value": null
+  }
+ ]
+}

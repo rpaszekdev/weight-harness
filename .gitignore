@@ -1,0 +1,6 @@
+# generated: python build.py / train.py / jspace.py recreate these
+weights.npz
+run/
+__pycache__/
+*.pyc
+.DS_Store

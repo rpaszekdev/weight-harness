@@ -1,0 +1,1249 @@
+{
+ "source": "MiniMax-M3 (2026-11-03, 2 batches), cross-checked by Claude",
+ "edits": [
+  "dropped papua new guinea (main language tok pisin is 2 words) and tonga (apostrophe in nuku'alofa)",
+  "tanzania language english -> swahili",
+  "dropped animals turkey (country clash), rooster (sound 'crow' is an animal), parrot, deer, beaver (odd sounds)",
+  "spider and goldfish: no sound fact (they make none)",
+  "dropped opposite pair famous/unknown",
+  "batch 2: +45 countries, currency for all, habitat + diet for all animals, +20 animals",
+  "paraguay language guarani -> spanish (clashes with its currency name); malawi english -> chichewa",
+  "zimbabwe: no currency fact (changed 2024); haiti capital port-au-prince -> port au prince",
+  "brazil real -> brazilian real, south korea won -> korean won (everyday words)",
+  "bee diet insectivore -> herbivore; seal, walrus legs 4 -> 0; gorilla, gibbon legs 4 -> 2",
+  "no sound fact for seal, koala, kangaroo, meerkat, gorilla, gibbon, walrus, porcupine, penguin (made-up sounds)"
+ ],
+ "countries": [
+  {
+   "country": "algeria",
+   "capital": "algiers",
+   "continent": "africa",
+   "language": "arabic",
+   "currency": "dinar"
+  },
+  {
+   "country": "egypt",
+   "capital": "cairo",
+   "continent": "africa",
+   "language": "arabic",
+   "currency": "pound"
+  },
+  {
+   "country": "ethiopia",
+   "capital": "addis ababa",
+   "continent": "africa",
+   "language": "amharic",
+   "currency": "birr"
+  },
+  {
+   "country": "ghana",
+   "capital": "accra",
+   "continent": "africa",
+   "language": "english",
+   "currency": "cedi"
+  },
+  {
+   "country": "kenya",
+   "capital": "nairobi",
+   "continent": "africa",
+   "language": "english",
+   "currency": "shilling"
+  },
+  {
+   "country": "morocco",
+   "capital": "rabat",
+   "continent": "africa",
+   "language": "arabic",
+   "currency": "dirham"
+  },
+  {
+   "country": "nigeria",
+   "capital": "abuja",
+   "continent": "africa",
+   "language": "english",
+   "currency": "naira"
+  },
+  {
+   "country": "senegal",
+   "capital": "dakar",
+   "continent": "africa",
+   "language": "french",
+   "currency": "franc"
+  },
+  {
+   "country": "tanzania",
+   "capital": "dodoma",
+   "continent": "africa",
+   "language": "swahili",
+   "currency": "shilling"
+  },
+  {
+   "country": "china",
+   "capital": "beijing",
+   "continent": "asia",
+   "language": "chinese",
+   "currency": "yuan"
+  },
+  {
+   "country": "india",
+   "capital": "new delhi",
+   "continent": "asia",
+   "language": "hindi",
+   "currency": "rupee"
+  },
+  {
+   "country": "indonesia",
+   "capital": "jakarta",
+   "continent": "asia",
+   "language": "indonesian",
+   "currency": "rupiah"
+  },
+  {
+   "country": "japan",
+   "capital": "tokyo",
+   "continent": "asia",
+   "language": "japanese",
+   "currency": "yen"
+  },
+  {
+   "country": "saudi arabia",
+   "capital": "riyadh",
+   "continent": "asia",
+   "language": "arabic",
+   "currency": "riyal"
+  },
+  {
+   "country": "south korea",
+   "capital": "seoul",
+   "continent": "asia",
+   "language": "korean",
+   "currency": "korean won"
+  },
+  {
+   "country": "thailand",
+   "capital": "bangkok",
+   "continent": "asia",
+   "language": "thai",
+   "currency": "baht"
+  },
+  {
+   "country": "turkey",
+   "capital": "ankara",
+   "continent": "asia",
+   "language": "turkish",
+   "currency": "lira"
+  },
+  {
+   "country": "vietnam",
+   "capital": "hanoi",
+   "continent": "asia",
+   "language": "vietnamese",
+   "currency": "dong"
+  },
+  {
+   "country": "france",
+   "capital": "paris",
+   "continent": "europe",
+   "language": "french",
+   "currency": "euro"
+  },
+  {
+   "country": "germany",
+   "capital": "berlin",
+   "continent": "europe",
+   "language": "german",
+   "currency": "euro"
+  },
+  {
+   "country": "greece",
+   "capital": "athens",
+   "continent": "europe",
+   "language": "greek",
+   "currency": "euro"
+  },
+  {
+   "country": "italy",
+   "capital": "rome",
+   "continent": "europe",
+   "language": "italian",
+   "currency": "euro"
+  },
+  {
+   "country": "poland",
+   "capital": "warsaw",
+   "continent": "europe",
+   "language": "polish",
+   "currency": "zloty"
+  },
+  {
+   "country": "portugal",
+   "capital": "lisbon",
+   "continent": "europe",
+   "language": "portuguese",
+   "currency": "euro"
+  },
+  {
+   "country": "spain",
+   "capital": "madrid",
+   "continent": "europe",
+   "language": "spanish",
+   "currency": "euro"
+  },
+  {
+   "country": "sweden",
+   "capital": "stockholm",
+   "continent": "europe",
+   "language": "swedish",
+   "currency": "krona"
+  },
+  {
+   "country": "united kingdom",
+   "capital": "london",
+   "continent": "europe",
+   "language": "english",
+   "currency": "pound"
+  },
+  {
+   "country": "canada",
+   "capital": "ottawa",
+   "continent": "north america",
+   "language": "english",
+   "currency": "dollar"
+  },
+  {
+   "country": "costa rica",
+   "capital": "san jose",
+   "continent": "north america",
+   "language": "spanish",
+   "currency": "colon"
+  },
+  {
+   "country": "cuba",
+   "capital": "havana",
+   "continent": "north america",
+   "language": "spanish",
+   "currency": "peso"
+  },
+  {
+   "country": "dominican republic",
+   "capital": "santo domingo",
+   "continent": "north america",
+   "language": "spanish",
+   "currency": "peso"
+  },
+  {
+   "country": "guatemala",
+   "capital": "guatemala city",
+   "continent": "north america",
+   "language": "spanish",
+   "currency": "quetzal"
+  },
+  {
+   "country": "jamaica",
+   "capital": "kingston",
+   "continent": "north america",
+   "language": "english",
+   "currency": "dollar"
+  },
+  {
+   "country": "mexico",
+   "capital": "mexico city",
+   "continent": "north america",
+   "language": "spanish",
+   "currency": "peso"
+  },
+  {
+   "country": "united states",
+   "capital": "washington",
+   "continent": "north america",
+   "language": "english",
+   "currency": "dollar"
+  },
+  {
+   "country": "argentina",
+   "capital": "buenos aires",
+   "continent": "south america",
+   "language": "spanish",
+   "currency": "peso"
+  },
+  {
+   "country": "brazil",
+   "capital": "brasilia",
+   "continent": "south america",
+   "language": "portuguese",
+   "currency": "brazilian real"
+  },
+  {
+   "country": "chile",
+   "capital": "santiago",
+   "continent": "south america",
+   "language": "spanish",
+   "currency": "peso"
+  },
+  {
+   "country": "colombia",
+   "capital": "bogota",
+   "continent": "south america",
+   "language": "spanish",
+   "currency": "peso"
+  },
+  {
+   "country": "ecuador",
+   "capital": "quito",
+   "continent": "south america",
+   "language": "spanish",
+   "currency": "dollar"
+  },
+  {
+   "country": "peru",
+   "capital": "lima",
+   "continent": "south america",
+   "language": "spanish",
+   "currency": "sol"
+  },
+  {
+   "country": "uruguay",
+   "capital": "montevideo",
+   "continent": "south america",
+   "language": "spanish",
+   "currency": "peso"
+  },
+  {
+   "country": "venezuela",
+   "capital": "caracas",
+   "continent": "south america",
+   "language": "spanish",
+   "currency": "bolivar"
+  },
+  {
+   "country": "australia",
+   "capital": "canberra",
+   "continent": "oceania",
+   "language": "english",
+   "currency": "dollar"
+  },
+  {
+   "country": "fiji",
+   "capital": "suva",
+   "continent": "oceania",
+   "language": "english",
+   "currency": "dollar"
+  },
+  {
+   "country": "new zealand",
+   "capital": "wellington",
+   "continent": "oceania",
+   "language": "english",
+   "currency": "dollar"
+  },
+  {
+   "country": "samoa",
+   "capital": "apia",
+   "continent": "oceania",
+   "language": "samoan",
+   "currency": "tala"
+  },
+  {
+   "country": "vanuatu",
+   "capital": "port vila",
+   "continent": "oceania",
+   "language": "bislama",
+   "currency": "vatu"
+  },
+  {
+   "country": "angola",
+   "capital": "luanda",
+   "continent": "africa",
+   "language": "portuguese",
+   "currency": "kwanza"
+  },
+  {
+   "country": "tunisia",
+   "capital": "tunis",
+   "continent": "africa",
+   "language": "arabic",
+   "currency": "dinar"
+  },
+  {
+   "country": "uganda",
+   "capital": "kampala",
+   "continent": "africa",
+   "language": "english",
+   "currency": "shilling"
+  },
+  {
+   "country": "zambia",
+   "capital": "lusaka",
+   "continent": "africa",
+   "language": "english",
+   "currency": "kwacha"
+  },
+  {
+   "country": "zimbabwe",
+   "capital": "harare",
+   "continent": "africa",
+   "language": "english",
+   "currency": null
+  },
+  {
+   "country": "guinea",
+   "capital": "conakry",
+   "continent": "africa",
+   "language": "french",
+   "currency": "franc"
+  },
+  {
+   "country": "mozambique",
+   "capital": "maputo",
+   "continent": "africa",
+   "language": "portuguese",
+   "currency": "metical"
+  },
+  {
+   "country": "somalia",
+   "capital": "mogadishu",
+   "continent": "africa",
+   "language": "somali",
+   "currency": "shilling"
+  },
+  {
+   "country": "malawi",
+   "capital": "lilongwe",
+   "continent": "africa",
+   "language": "chichewa",
+   "currency": "kwacha"
+  },
+  {
+   "country": "pakistan",
+   "capital": "islamabad",
+   "continent": "asia",
+   "language": "urdu",
+   "currency": "rupee"
+  },
+  {
+   "country": "bangladesh",
+   "capital": "dhaka",
+   "continent": "asia",
+   "language": "bengali",
+   "currency": "taka"
+  },
+  {
+   "country": "nepal",
+   "capital": "kathmandu",
+   "continent": "asia",
+   "language": "nepali",
+   "currency": "rupee"
+  },
+  {
+   "country": "myanmar",
+   "capital": "naypyidaw",
+   "continent": "asia",
+   "language": "burmese",
+   "currency": "kyat"
+  },
+  {
+   "country": "cambodia",
+   "capital": "phnom penh",
+   "continent": "asia",
+   "language": "khmer",
+   "currency": "riel"
+  },
+  {
+   "country": "jordan",
+   "capital": "amman",
+   "continent": "asia",
+   "language": "arabic",
+   "currency": "dinar"
+  },
+  {
+   "country": "philippines",
+   "capital": "manila",
+   "continent": "asia",
+   "language": "filipino",
+   "currency": "peso"
+  },
+  {
+   "country": "uzbekistan",
+   "capital": "tashkent",
+   "continent": "asia",
+   "language": "uzbek",
+   "currency": "som"
+  },
+  {
+   "country": "qatar",
+   "capital": "doha",
+   "continent": "asia",
+   "language": "arabic",
+   "currency": "riyal"
+  },
+  {
+   "country": "romania",
+   "capital": "bucharest",
+   "continent": "europe",
+   "language": "romanian",
+   "currency": "leu"
+  },
+  {
+   "country": "hungary",
+   "capital": "budapest",
+   "continent": "europe",
+   "language": "hungarian",
+   "currency": "forint"
+  },
+  {
+   "country": "czech republic",
+   "capital": "prague",
+   "continent": "europe",
+   "language": "czech",
+   "currency": "koruna"
+  },
+  {
+   "country": "austria",
+   "capital": "vienna",
+   "continent": "europe",
+   "language": "german",
+   "currency": "euro"
+  },
+  {
+   "country": "switzerland",
+   "capital": "bern",
+   "continent": "europe",
+   "language": "german",
+   "currency": "franc"
+  },
+  {
+   "country": "belgium",
+   "capital": "brussels",
+   "continent": "europe",
+   "language": "dutch",
+   "currency": "euro"
+  },
+  {
+   "country": "ukraine",
+   "capital": "kyiv",
+   "continent": "europe",
+   "language": "ukrainian",
+   "currency": "hryvnia"
+  },
+  {
+   "country": "russia",
+   "capital": "moscow",
+   "continent": "europe",
+   "language": "russian",
+   "currency": "ruble"
+  },
+  {
+   "country": "denmark",
+   "capital": "copenhagen",
+   "continent": "europe",
+   "language": "danish",
+   "currency": "krone"
+  },
+  {
+   "country": "ireland",
+   "capital": "dublin",
+   "continent": "europe",
+   "language": "english",
+   "currency": "euro"
+  },
+  {
+   "country": "finland",
+   "capital": "helsinki",
+   "continent": "europe",
+   "language": "finnish",
+   "currency": "euro"
+  },
+  {
+   "country": "bahamas",
+   "capital": "nassau",
+   "continent": "north america",
+   "language": "english",
+   "currency": "dollar"
+  },
+  {
+   "country": "barbados",
+   "capital": "bridgetown",
+   "continent": "north america",
+   "language": "english",
+   "currency": "dollar"
+  },
+  {
+   "country": "haiti",
+   "capital": "port au prince",
+   "continent": "north america",
+   "language": "creole",
+   "currency": "gourde"
+  },
+  {
+   "country": "el salvador",
+   "capital": "san salvador",
+   "continent": "north america",
+   "language": "spanish",
+   "currency": "dollar"
+  },
+  {
+   "country": "honduras",
+   "capital": "tegucigalpa",
+   "continent": "north america",
+   "language": "spanish",
+   "currency": "lempira"
+  },
+  {
+   "country": "trinidad and tobago",
+   "capital": "port of spain",
+   "continent": "north america",
+   "language": "english",
+   "currency": "dollar"
+  },
+  {
+   "country": "nicaragua",
+   "capital": "managua",
+   "continent": "north america",
+   "language": "spanish",
+   "currency": "cordoba"
+  },
+  {
+   "country": "guyana",
+   "capital": "georgetown",
+   "continent": "south america",
+   "language": "english",
+   "currency": "dollar"
+  },
+  {
+   "country": "paraguay",
+   "capital": "asuncion",
+   "continent": "south america",
+   "language": "spanish",
+   "currency": "guarani"
+  },
+  {
+   "country": "suriname",
+   "capital": "paramaribo",
+   "continent": "south america",
+   "language": "dutch",
+   "currency": "dollar"
+  },
+  {
+   "country": "solomon islands",
+   "capital": "honiara",
+   "continent": "oceania",
+   "language": "pijin",
+   "currency": "dollar"
+  },
+  {
+   "country": "tonga",
+   "capital": "nuku alofa",
+   "continent": "oceania",
+   "language": "tongan",
+   "currency": "paanga"
+  },
+  {
+   "country": "kiribati",
+   "capital": "south tarawa",
+   "continent": "oceania",
+   "language": "gilbertese",
+   "currency": "dollar"
+  },
+  {
+   "country": "tuvalu",
+   "capital": "funafuti",
+   "continent": "oceania",
+   "language": "tuvaluan",
+   "currency": "dollar"
+  },
+  {
+   "country": "marshall islands",
+   "capital": "majuro",
+   "continent": "oceania",
+   "language": "marshallese",
+   "currency": "dollar"
+  },
+  {
+   "country": "micronesia",
+   "capital": "palikir",
+   "continent": "oceania",
+   "language": "english",
+   "currency": "dollar"
+  }
+ ],
+ "animals": [
+  {
+   "animal": "cow",
+   "sound": "moo",
+   "legs": 4,
+   "class": "mammal",
+   "habitat": "farm",
+   "diet": "herbivore"
+  },
+  {
+   "animal": "dog",
+   "sound": "woof",
+   "legs": 4,
+   "class": "mammal",
+   "habitat": "house",
+   "diet": "omnivore"
+  },
+  {
+   "animal": "cat",
+   "sound": "meow",
+   "legs": 4,
+   "class": "mammal",
+   "habitat": "house",
+   "diet": "carnivore"
+  },
+  {
+   "animal": "horse",
+   "sound": "neigh",
+   "legs": 4,
+   "class": "mammal",
+   "habitat": "farm",
+   "diet": "herbivore"
+  },
+  {
+   "animal": "pig",
+   "sound": "oink",
+   "legs": 4,
+   "class": "mammal",
+   "habitat": "farm",
+   "diet": "omnivore"
+  },
+  {
+   "animal": "sheep",
+   "sound": "baa",
+   "legs": 4,
+   "class": "mammal",
+   "habitat": "farm",
+   "diet": "herbivore"
+  },
+  {
+   "animal": "goat",
+   "sound": "bleat",
+   "legs": 4,
+   "class": "mammal",
+   "habitat": "farm",
+   "diet": "herbivore"
+  },
+  {
+   "animal": "lion",
+   "sound": "roar",
+   "legs": 4,
+   "class": "mammal",
+   "habitat": "savanna",
+   "diet": "carnivore"
+  },
+  {
+   "animal": "tiger",
+   "sound": "growl",
+   "legs": 4,
+   "class": "mammal",
+   "habitat": "jungle",
+   "diet": "carnivore"
+  },
+  {
+   "animal": "bear",
+   "sound": "snarl",
+   "legs": 4,
+   "class": "mammal",
+   "habitat": "forest",
+   "diet": "omnivore"
+  },
+  {
+   "animal": "wolf",
+   "sound": "howl",
+   "legs": 4,
+   "class": "mammal",
+   "habitat": "forest",
+   "diet": "carnivore"
+  },
+  {
+   "animal": "mouse",
+   "sound": "squeak",
+   "legs": 4,
+   "class": "mammal",
+   "habitat": "house",
+   "diet": "omnivore"
+  },
+  {
+   "animal": "rabbit",
+   "sound": "thump",
+   "legs": 4,
+   "class": "mammal",
+   "habitat": "grassland",
+   "diet": "herbivore"
+  },
+  {
+   "animal": "elephant",
+   "sound": "trumpet",
+   "legs": 4,
+   "class": "mammal",
+   "habitat": "savanna",
+   "diet": "herbivore"
+  },
+  {
+   "animal": "monkey",
+   "sound": "chatter",
+   "legs": 4,
+   "class": "mammal",
+   "habitat": "jungle",
+   "diet": "omnivore"
+  },
+  {
+   "animal": "donkey",
+   "sound": "bray",
+   "legs": 4,
+   "class": "mammal",
+   "habitat": "farm",
+   "diet": "herbivore"
+  },
+  {
+   "animal": "camel",
+   "sound": "grunt",
+   "legs": 4,
+   "class": "mammal",
+   "habitat": "desert",
+   "diet": "herbivore"
+  },
+  {
+   "animal": "bat",
+   "sound": "screech",
+   "legs": 2,
+   "class": "mammal",
+   "habitat": "forest",
+   "diet": "insectivore"
+  },
+  {
+   "animal": "dolphin",
+   "sound": "click",
+   "legs": 0,
+   "class": "mammal",
+   "habitat": "ocean",
+   "diet": "carnivore"
+  },
+  {
+   "animal": "whale",
+   "sound": "moan",
+   "legs": 0,
+   "class": "mammal",
+   "habitat": "ocean",
+   "diet": "carnivore"
+  },
+  {
+   "animal": "fox",
+   "sound": "bark",
+   "legs": 4,
+   "class": "mammal",
+   "habitat": "forest",
+   "diet": "omnivore"
+  },
+  {
+   "animal": "raccoon",
+   "sound": "squeal",
+   "legs": 4,
+   "class": "mammal",
+   "habitat": "forest",
+   "diet": "omnivore"
+  },
+  {
+   "animal": "chicken",
+   "sound": "cluck",
+   "legs": 2,
+   "class": "bird",
+   "habitat": "farm",
+   "diet": "omnivore"
+  },
+  {
+   "animal": "duck",
+   "sound": "quack",
+   "legs": 2,
+   "class": "bird",
+   "habitat": "farm",
+   "diet": "omnivore"
+  },
+  {
+   "animal": "goose",
+   "sound": "honk",
+   "legs": 2,
+   "class": "bird",
+   "habitat": "farm",
+   "diet": "herbivore"
+  },
+  {
+   "animal": "owl",
+   "sound": "hoot",
+   "legs": 2,
+   "class": "bird",
+   "habitat": "forest",
+   "diet": "carnivore"
+  },
+  {
+   "animal": "crow",
+   "sound": "caw",
+   "legs": 2,
+   "class": "bird",
+   "habitat": "grassland",
+   "diet": "omnivore"
+  },
+  {
+   "animal": "sparrow",
+   "sound": "chirp",
+   "legs": 2,
+   "class": "bird",
+   "habitat": "grassland",
+   "diet": "omnivore"
+  },
+  {
+   "animal": "seagull",
+   "sound": "squawk",
+   "legs": 2,
+   "class": "bird",
+   "habitat": "ocean",
+   "diet": "omnivore"
+  },
+  {
+   "animal": "snake",
+   "sound": "hiss",
+   "legs": 0,
+   "class": "reptile",
+   "habitat": "forest",
+   "diet": "carnivore"
+  },
+  {
+   "animal": "crocodile",
+   "sound": "bellow",
+   "legs": 4,
+   "class": "reptile",
+   "habitat": "river",
+   "diet": "carnivore"
+  },
+  {
+   "animal": "frog",
+   "sound": "croak",
+   "legs": 4,
+   "class": "amphibian",
+   "habitat": "swamp",
+   "diet": "insectivore"
+  },
+  {
+   "animal": "goldfish",
+   "sound": null,
+   "legs": 0,
+   "class": "fish",
+   "habitat": "house",
+   "diet": "omnivore"
+  },
+  {
+   "animal": "bee",
+   "sound": "buzz",
+   "legs": 6,
+   "class": "insect",
+   "habitat": "grassland",
+   "diet": "herbivore"
+  },
+  {
+   "animal": "spider",
+   "sound": null,
+   "legs": 8,
+   "class": "arachnid",
+   "habitat": "forest",
+   "diet": "carnivore"
+  },
+  {
+   "animal": "zebra",
+   "sound": "whinny",
+   "legs": 4,
+   "class": "mammal",
+   "habitat": "grassland",
+   "diet": "herbivore"
+  },
+  {
+   "animal": "giraffe",
+   "sound": "hum",
+   "legs": 4,
+   "class": "mammal",
+   "habitat": "savanna",
+   "diet": "herbivore"
+  },
+  {
+   "animal": "rhinoceros",
+   "sound": "snort",
+   "legs": 4,
+   "class": "mammal",
+   "habitat": "savanna",
+   "diet": "herbivore"
+  },
+  {
+   "animal": "hippopotamus",
+   "sound": "wheeze",
+   "legs": 4,
+   "class": "mammal",
+   "habitat": "river",
+   "diet": "herbivore"
+  },
+  {
+   "animal": "seal",
+   "sound": null,
+   "legs": 0,
+   "class": "mammal",
+   "habitat": "ocean",
+   "diet": "carnivore"
+  },
+  {
+   "animal": "hyena",
+   "sound": "laugh",
+   "legs": 4,
+   "class": "mammal",
+   "habitat": "savanna",
+   "diet": "carnivore"
+  },
+  {
+   "animal": "koala",
+   "sound": null,
+   "legs": 4,
+   "class": "mammal",
+   "habitat": "forest",
+   "diet": "herbivore"
+  },
+  {
+   "animal": "kangaroo",
+   "sound": null,
+   "legs": 2,
+   "class": "mammal",
+   "habitat": "grassland",
+   "diet": "herbivore"
+  },
+  {
+   "animal": "capybara",
+   "sound": "purr",
+   "legs": 4,
+   "class": "mammal",
+   "habitat": "river",
+   "diet": "herbivore"
+  },
+  {
+   "animal": "elk",
+   "sound": "bugle",
+   "legs": 4,
+   "class": "mammal",
+   "habitat": "forest",
+   "diet": "herbivore"
+  },
+  {
+   "animal": "meerkat",
+   "sound": null,
+   "legs": 4,
+   "class": "mammal",
+   "habitat": "desert",
+   "diet": "insectivore"
+  },
+  {
+   "animal": "gorilla",
+   "sound": null,
+   "legs": 2,
+   "class": "mammal",
+   "habitat": "jungle",
+   "diet": "omnivore"
+  },
+  {
+   "animal": "gibbon",
+   "sound": null,
+   "legs": 2,
+   "class": "mammal",
+   "habitat": "jungle",
+   "diet": "omnivore"
+  },
+  {
+   "animal": "walrus",
+   "sound": null,
+   "legs": 0,
+   "class": "mammal",
+   "habitat": "arctic",
+   "diet": "carnivore"
+  },
+  {
+   "animal": "otter",
+   "sound": "whistle",
+   "legs": 4,
+   "class": "mammal",
+   "habitat": "river",
+   "diet": "carnivore"
+  },
+  {
+   "animal": "porcupine",
+   "sound": null,
+   "legs": 4,
+   "class": "mammal",
+   "habitat": "forest",
+   "diet": "herbivore"
+  },
+  {
+   "animal": "rattlesnake",
+   "sound": "rattle",
+   "legs": 0,
+   "class": "reptile",
+   "habitat": "desert",
+   "diet": "carnivore"
+  },
+  {
+   "animal": "penguin",
+   "sound": null,
+   "legs": 2,
+   "class": "bird",
+   "habitat": "ocean",
+   "diet": "carnivore"
+  },
+  {
+   "animal": "pigeon",
+   "sound": "coo",
+   "legs": 2,
+   "class": "bird",
+   "habitat": "house",
+   "diet": "omnivore"
+  },
+  {
+   "animal": "ostrich",
+   "sound": "boom",
+   "legs": 2,
+   "class": "bird",
+   "habitat": "grassland",
+   "diet": "omnivore"
+  }
+ ],
+ "opposites": [
+  [
+   "hot",
+   "cold"
+  ],
+  [
+   "big",
+   "small"
+  ],
+  [
+   "old",
+   "new"
+  ],
+  [
+   "good",
+   "bad"
+  ],
+  [
+   "happy",
+   "sad"
+  ],
+  [
+   "easy",
+   "difficult"
+  ],
+  [
+   "right",
+   "wrong"
+  ],
+  [
+   "near",
+   "far"
+  ],
+  [
+   "fast",
+   "slow"
+  ],
+  [
+   "early",
+   "late"
+  ],
+  [
+   "high",
+   "low"
+  ],
+  [
+   "long",
+   "short"
+  ],
+  [
+   "strong",
+   "weak"
+  ],
+  [
+   "rich",
+   "poor"
+  ],
+  [
+   "clean",
+   "dirty"
+  ],
+  [
+   "dry",
+   "wet"
+  ],
+  [
+   "open",
+   "closed"
+  ],
+  [
+   "full",
+   "empty"
+  ],
+  [
+   "light",
+   "heavy"
+  ],
+  [
+   "black",
+   "white"
+  ],
+  [
+   "sweet",
+   "bitter"
+  ],
+  [
+   "fresh",
+   "stale"
+  ],
+  [
+   "sharp",
+   "dull"
+  ],
+  [
+   "smooth",
+   "rough"
+  ],
+  [
+   "tight",
+   "loose"
+  ],
+  [
+   "warm",
+   "cool"
+  ],
+  [
+   "wide",
+   "narrow"
+  ],
+  [
+   "thick",
+   "thin"
+  ],
+  [
+   "deep",
+   "shallow"
+  ],
+  [
+   "loud",
+   "quiet"
+  ],
+  [
+   "pretty",
+   "ugly"
+  ],
+  [
+   "expensive",
+   "cheap"
+  ],
+  [
+   "same",
+   "different"
+  ],
+  [
+   "safe",
+   "dangerous"
+  ]
+ ]
+}
