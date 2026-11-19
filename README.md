@@ -118,3 +118,7 @@ See the LATER list in `jspace.py`.
 - J-lens / J-space: Anthropic, *A global workspace in language models* (2026)
 - Key-value edits: Meng et al., *Locating and Editing Factual Associations in GPT* (ROME, 2022)
 - Facts and held-out questions: MiniMax-M3, cross-checked by hand (edits listed in `facts.json`)
+
+## License
+
+MIT, see [LICENSE](LICENSE).
