@@ -211,6 +211,77 @@ def top_k(delta, step):
     return [np.full(cols.numel(), step), words.flatten().numpy(), cols.flatten().numpy(), vals.flatten().numpy()]
 
 
+# ---------- live frames for `wsv live` ----------
+def write_json(path, obj):
+    """Write atomically (tmp file + rename) so the viewer never reads half a frame."""
+    with open(path + ".tmp", "w") as f:
+        json.dump(obj, f)
+    os.replace(path + ".tmp", path)
+
+
+@torch.no_grad()
+def batched_probe_loss(model, probes, eot):
+    t = max(len(pr["ids"]) for pr in probes)
+    ids = torch.tensor([pr["ids"] + [eot] * (t - len(pr["ids"])) for pr in probes])
+    last = torch.tensor([len(pr["ids"]) - 1 for pr in probes])
+    logits = model(ids)[torch.arange(len(probes)), last]
+    return F.cross_entropy(logits, torch.tensor([pr["obj"] for pr in probes]), reduction="none")
+
+
+class Live:
+    """Every `every` steps, write run/live.json: what moved, which words moved it, which facts just landed."""
+
+    def __init__(self, out, every, model, names, units, vocab, probes, steps, rows=10):
+        os.makedirs(out, exist_ok=True)
+        self.path, self.every, self.units, self.probes, self.rows = os.path.join(out, "live.json"), every, units, probes, rows
+        self.facts = [f"{s} {rel} {o}" for rel, (_, s), (_, o) in corpus.load_facts()]
+        self.labels, self.names = [label(t) for t in vocab], names
+        self.last_layer = len(model.blocks) - 1
+        write_json(os.path.join(out, "live_meta.json"), {"units": names, "vocab": self.labels, "steps": steps,
+                                                        "every": every, "n_facts": len(probes)})
+        self.prev = {k: v.detach().clone() for k, v in model.named_parameters()}
+        self.prev_push, self.learned, self.loss_hist, self.facts_hist, self.t0 = None, set(), [], [], time.time()
+
+    def moved(self, model):
+        d = torch.zeros(len(self.names))
+        for name, p in model.named_parameters():
+            diff = (p.detach() - self.prev[name]).reshape(-1)
+            d.index_add_(0, self.units[name], diff * diff)
+            self.prev[name] = p.detach().clone()
+        return d.sqrt()
+
+    def frame(self, step, model, push, losses, eot, done=False):
+        d = self.moved(model)
+        probe = batched_probe_loss(model, self.probes, eot)
+        learned = {i for i in range(len(self.probes)) if probe[i] < 0.5}
+        new = [self.facts[self.probes[i]["fact"]] for i in sorted(learned - self.learned)]
+        self.learned = learned
+        delta = push - self.prev_push if self.prev_push is not None else push
+        self.prev_push = push.clone()
+        by_word = delta.sum(1)
+        tops = torch.topk(by_word, 5).indices.tolist()
+        mean = sum(losses) / len(losses) if losses else float("nan")
+        self.loss_hist.append(mean)
+        self.facts_hist.append(len(learned))
+        name = f"blocks.{self.last_layer}.w2"
+        ids = [self.names.index(f"L{self.last_layer}.mlp.n{i}") for i in range(model.blocks[-1].w2.shape[0])]
+        hot = torch.topk(d[ids], self.rows).indices.tolist()
+        rate = (time.time() - self.t0) / max(step, 1)
+        self.last = {
+            "step": step, "done": done, "rate": rate, "loss": mean, "loss_hist": self.loss_hist, "facts": len(learned), "facts_hist": self.facts_hist,
+            "moved": [round(x, 6) for x in d.tolist()],
+            "pushers": [[self.labels[w], float(by_word[w] / (by_word.sum() + 1e-12))] for w in tops],
+            "new_facts": new[:6], "n_new": len(new), "live_matrix": f"L{self.last_layer}.mlp.w2",
+            "live_rows": [{"unit": f"L{self.last_layer}.mlp.n{i}",
+                           "w": [round(x, 4) for x in model.blocks[-1].w2[i].tolist()]} for i in hot]}
+        write_json(self.path, self.last)
+
+    def finish(self, step, model, push, losses, eot):
+        if self.last["step"] != step:
+            self.frame(step, model, push, losses, eot)
+        write_json(self.path, {**self.last, "done": True})
+
+
 # ---------- main ----------
 def parse():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -227,6 +298,8 @@ def parse():
     ap.add_argument("--ff", type=int, default=256)
     ap.add_argument("--seed", type=int, default=0)
     ap.add_argument("--out", default=RUN)
+    ap.add_argument("--live", type=int, default=0, metavar="N",
+                    help="every N steps write run/live.json for `python wsv.py live` (0 = off)")
     args = ap.parse_args()
     if args.quick:
         args.steps, args.ckpt_every = 400, 50
@@ -266,6 +339,8 @@ def main():
     push, seen = torch.zeros(len(vocab), len(names)), torch.zeros(len(vocab))
     log = {"steps": [], "losses": [], "intervals": [], "ckpts": {}, "train_loss": [], "args": vars(args)}
     last, t0, loss = push.clone(), time.time(), float("nan")
+    live = Live(args.out, args.live, model, names, units, vocab, probes, args.steps) if args.live else None
+    since = []
     print(f"{len(train)} training questions, {len(names)} units, "
           f"{sum(p.numel() for p in model.parameters()):,} params, {args.steps} steps")
     for step in range(args.steps + 1):
@@ -279,16 +354,22 @@ def main():
             rate = (time.time() - t0) / max(step, 1)
             print(f"step {step:5d}  train loss {loss:.3f}  probe loss {np.mean(log['losses'][-1]):.3f}  "
                   f"{rate:.2f}s/step  eta {rate * (args.steps - step) / 60:.1f} min", flush=True)
+        if live and step % args.live == 0:
+            live.frame(step, model, push, since, idx[EOT], done=False)
+            since = []
         if step == args.steps:
             break
         items = make_items(random.sample(train, args.batch), idx[EOT])
         seen.index_add_(0, items[2], torch.ones(len(items[2])))
         loss = train_step(model, grads_fn, units, state, items, push, args)
         log["train_loss"].append(loss)
+        since.append(loss)
     ok, n = heldout_accuracy(model, exs, idx)
     print(f"held-out wording: {ok}/{n} answers exactly right")
     log.update(push=push, seen=seen, heldout={"correct": ok, "total": n}, seconds=time.time() - t0)
     save(args.out, cfg, vocab, names, units, exs, probes, log)
+    if live:
+        live.finish(args.steps, model, push, since, idx[EOT])
     print(f"wrote {args.out}/  ->  python wsv.py atlas")
 
 

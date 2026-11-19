@@ -8,6 +8,7 @@
   python wsv.py word   lima                     which units this training word moved (heat map)
   python wsv.py diff   500 700                  what changed between two checkpoints, and which words did it
   python wsv.py timeline                        training as a graph: facts learned, loss, what moved, who moved it
+  python wsv.py live   [--once]                 watch training as it happens (run train.py --live 20 alongside)
   python wsv.py ablate L1.mlp.n41 --ask "capital of peru?" "capital of chile?"
   python wsv.py png    L1.mlp.w1 [--out f.png]  a weight matrix as an image, rows sorted by top word
   editing (wsedit.py): write weights by hand, closed form, no gradient descent; --base ignores edits
@@ -652,6 +653,65 @@ def cmd_jspace(run, n_pairs, k):
               f"J part of activation {frac_j:.0%} (random set {frac_r:.0%})   → {verdict}")
 
 
+# ---------- live view of a training run (train.py --live N) ----------
+def live_groups(units, layers):
+    groups = [("emb", "emb:")]
+    for l in range(layers):
+        groups += [(f"L{l}.attn", f"L{l}.attn."), (f"L{l}.mlp", f"L{l}.mlp.")]
+    groups.append(("unemb", "unemb:"))
+    return [(g, np.array([i for i, n in enumerate(units) if n.startswith(p)])) for g, p in groups]
+
+
+def pooled_heat(vals, cells=64):
+    if len(vals) > cells:
+        vals = vals[: len(vals) // cells * cells].reshape(cells, -1).max(1)
+    return heat(vals)
+
+
+def draw_live(meta, fr, width=24):
+    moved = np.array(fr["moved"])
+    hist = [v for v in fr["loss_hist"] if v == v]  # the first frame has no loss yet (NaN)
+    layers = 1 + max(int(n[1:].split(".")[0]) for n in meta["units"] if n.startswith("L") and ".mlp." in n)
+    n = meta["n_facts"]
+    bar = "█" * round(width * fr["facts"] / n) + "░" * (width - round(width * fr["facts"] / n))
+    eta = fr["rate"] * (meta["steps"] - fr["step"]) / 60
+    out = [f"wsv live   step {fr['step']}/{meta['steps']} · {fr['rate']:.2f} s/step · "
+           + ("DONE ✓" if fr["done"] else f"eta {eta:.1f} min"),
+           f"  loss   {spark(hist[-40:]) if len(hist) > 1 else ''}  {fr['loss']:.3f}"
+           f"      facts {bar} {fr['facts']}/{n}",
+           f"  moved in the last {meta['every']} steps  (Δ|w| per unit · each row scaled to its own max · total →)"]
+    for g, idx in live_groups(meta["units"], layers):
+        vals = moved[idx]
+        cells = (" ".join(f"h{i} {heat(vals)[i]}" for i in range(len(vals))) if ".attn" in g else pooled_heat(vals))
+        out.append(f"    {g:8s} {cells:66s} {vals.sum():8.4f}")
+    out.append("  moving the weights now: " + " · ".join(f"{w} {100 * s:.0f}%" for w, s in fr["pushers"]))
+    more = f" (+{fr['n_new'] - len(fr['new_facts'])} more)" if fr["n_new"] > len(fr["new_facts"]) else ""
+    out.append("  just learned: " + (" · ".join(f"{f} ✓" for f in fr["new_facts"]) + more if fr["new_facts"] else "—"))
+    out.append(f"  {fr['live_matrix']} live: the {len(fr['live_rows'])} neurons that moved most, one glyph per weight")
+    out += [f"    {r['unit']:13s} {glyphs(np.array(r['w']))}" for r in fr["live_rows"]]
+    return "\n".join(out)
+
+
+def cmd_live(path, once, interval=0.5):
+    """Redraw the newest frame in place until training says done (ctrl-c to stop watching)."""
+    import time
+    meta_p, live_p, last = os.path.join(path, "live_meta.json"), os.path.join(path, "live.json"), None
+    if once and not os.path.exists(live_p):
+        raise SystemExit(f"no {live_p}: start training with  python train.py --live 20")
+    waited = False
+    while True:
+        if os.path.exists(live_p) and os.path.exists(meta_p) and os.path.getmtime(live_p) != last:
+            last = os.path.getmtime(live_p)
+            fr, meta = json.load(open(live_p)), json.load(open(meta_p))
+            print(("" if once else "\x1b[2J\x1b[H") + draw_live(meta, fr), flush=True)
+            if once or fr["done"]:
+                return
+        elif not waited and not os.path.exists(live_p):
+            print(f"waiting for {live_p} … start training with  python train.py --live 20", flush=True)
+            waited = True
+        time.sleep(interval)
+
+
 def emit(lines, budget):
     out, used = [], 0
     for line in lines:
@@ -684,6 +744,7 @@ def main():
     ab.add_argument("unit")
     ab.add_argument("--ask", nargs="+", required=True)
     sub.add_parser("timeline")
+    sub.add_parser("live").add_argument("--once", action="store_true", help="print the newest frame and exit")
     sub.add_parser("failures")
     ed = sub.add_parser("edit")
     ed.add_argument("fact", nargs="+", help="'peru capital lima' or a fact number from failures")
@@ -707,6 +768,8 @@ def main():
     pg.add_argument("matrix", help="emb, unemb, L1.mlp.w1, L1.mlp.w2, L0.attn.q, ...")
     pg.add_argument("--out")
     args = ap.parse_args()
+    if args.cmd == "live":  # works while training runs, before run/config.json exists
+        return cmd_live(args.run, args.once)
     run = Run(args.run, args.step, edits=not args.base)
     if args.cmd in ("failures", "edit", "check", "edits", "undo"):
         import wsedit  # editing lives in its own module
